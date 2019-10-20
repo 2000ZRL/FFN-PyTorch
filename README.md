@@ -7,13 +7,16 @@ I also modify my codes to run FFN on multi-gpus (eight gpus at most) by DataPara
 In addition, I wrote eval.py to evaluate the segmentation results automatically. And evaluation metrics can be seen [here](https://github.com/cremi/cremi_python). 
 In order to select the best model on validation dataset, I also wrote ckp_sel.py to do the job automatically.
 
-How to get data? Please read README.md of [original FFN](https://github.com/google/ffn) proposed by Google AI. The data are stored in their Google Cloud.
+How to get data? The data is so large that they are stored on Baidu Cloud. Here is the link.
 
-How to put the data? After you get the training and test dataset, please put them in FIB-25/train_sample and FIB-25/test_sample, respectively
+How to put the data? After you get the training and test dataset, please unzip them and put them in FIB-25/train_sample and FIB-25/test_sample, respectively
 If you put them somewhere else, you might need to modify the 'flags' in my scripts.
 
 How to run the scripts? 
-Before you train the model, please run partition.py and then build_coordinates.py in 'data'. What these two scripts do can be found in README.md of [original FFN](https://github.com/google/ffn).
-Run train.py. Before that please set Visdom on your server. One checkpoint is stored in 'checkpoints', although it might not be the best one.
+Before you train the model, please run partition.py and then build_coordinates.py in 'data'. What these two scripts do can be found in README.md of [original FFN](https://github.com/google/ffn). In fact, I have already done the preprocessing part and the result is coordinates_file.npy stored on Baidu Cloud. So you can ignore this step.
+
+Run train.py. Before that please set Visdom on your server or just comment out the codes about 'eval_tracker'. One checkpoint is stored in 'checkpoints', although it might not be the best one.
+
 Run inference.py
+
 Run eval.py
