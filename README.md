@@ -7,7 +7,7 @@ I also modify my codes to run FFN on multi-gpus (eight gpus at most) by DataPara
 In addition, I wrote eval.py to evaluate the segmentation results automatically. And evaluation metrics can be seen [here](https://github.com/cremi/cremi_python). You should setup 'cremi' on your PC or server. Pay attention to that 'cremi' was written by Python2, so you should modify some codes.
 In order to select the best model on validation dataset, I also wrote ckp_sel.py to do the job automatically.
 
-How to get data? The data is so large that they are stored on Baidu Cloud. Here is the link.
+How to get data? The data is so large that they are stored on Baidu Cloud. Here is the [link](https://pan.baidu.com/s/1piHRLQbgOND_7PQ9vZY42w&shfl=sharepset).
 
 How to put the data? After you get the training and test dataset, please unzip them and put them in FIB-25/train_sample and FIB-25/test_sample, respectively
 If you put them somewhere else, you might need to modify the 'flags' in my scripts.
