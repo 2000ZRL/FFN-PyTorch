@@ -4,7 +4,7 @@ Reimplementation of Flood Filling Network based on Pytorch
 In the summer of 2019, I was conducting summer research for three months in [Prof. Shuiwang Ji](http://people.tamu.edu/~sji/)'s lab, Texas A&M University. 
 In the first month I finished reimplementing Flood-Filling Network by PyTorch. 
 I also modify my codes to run FFN on multi-gpus (eight gpus at most) by DataParallelism. 
-In addition, I wrote eval.py to evaluate the segmentation results automatically. And evaluation metrics can be seen [here](https://github.com/cremi/cremi_python). 
+In addition, I wrote eval.py to evaluate the segmentation results automatically. And evaluation metrics can be seen [here](https://github.com/cremi/cremi_python). You should setup 'cremi' on your PC or server. Pay attention to that 'cremi' was written by Python2, so you should modify some codes.
 In order to select the best model on validation dataset, I also wrote ckp_sel.py to do the job automatically.
 
 How to get data? The data is so large that they are stored on Baidu Cloud. Here is the link.
