@@ -19,4 +19,4 @@ Run train.py. Before that please set Visdom on your server or just comment out t
 
 Run inference.py
 
-Run eval.py
+Run ckp_sel.py
