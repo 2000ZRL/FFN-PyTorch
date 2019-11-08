@@ -122,12 +122,12 @@ class Canvas(object):
         low = np_pos - self.margin  #marigin=16,16,16
         high = np_pos + self.margin
 
-        if np.any(low < 0) or np.any(high >= self.shape):  #越界
+        if np.any(low < 0) or np.any(high >= self.shape):  
             logging.debug('.. too close to border: %r', pos)
             return False
 
         # Location already segmented?
-        if self.segmentation[pos] > 0:  #已分割
+        if self.segmentation[pos] > 0:  #segmented
             logging.debug('.. segmentation already active: %r', pos)
             return False
 
@@ -256,7 +256,7 @@ class Canvas(object):
             high = np.array(pos) + mbd + 1
             sel = [slice(s, e) for s, e in zip(low, high)]
             sel = tuple(sel)
-            if np.any(self.segmentation[sel] > 0):  #1，1，1范围内已分割，invalid -> continue
+            if np.any(self.segmentation[sel] > 0):  #invalid -> continue
                 logging.debug('Too close to existing segment.')
                 self.segmentation[pos] = -1
                 continue
