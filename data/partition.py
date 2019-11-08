@@ -127,7 +127,7 @@ def compute_partitions(seg_array, thresholds, lom_radius, min_size=10000):
 
         # Drop context that is only necessary for computing the active fraction
         # (i.e. one LOM radius in every direction).
-        object_mask = object_mask[valid_sel]  #扣去了lom_radius=24的elements
+        object_mask = object_mask[valid_sel] 
 
         # TODO(mjanusz): Use np.digitize here.
         for i, th in enumerate(thresholds):
@@ -175,7 +175,7 @@ def main(argv):
         s = partitions.shape
         ds[corner[2]:corner[2] + s[0],
             corner[1]:corner[1] + s[1],
-            corner[0]:corner[0] + s[2]] = partitions  #边缘处灰度值不变
+            corner[0]:corner[0] + s[2]] = partitions  
         """
         ds.attrs['bounding_boxes'] = [(b.start, b.size) for b in bboxes]
         ds.attrs['partition_counts'] = np.array(np.unique(partitions,
