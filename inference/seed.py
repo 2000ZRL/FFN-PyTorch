@@ -106,7 +106,7 @@ class PolicyPeaks(BaseSeedPolicy):
           filt_edges[self.canvas.restrictor.mask] = 1
         '''
         logging.info('peaks: filtering done')
-        dt = ndimage.distance_transform_edt(1 - filt_edges).astype(np.float32) #离边缘的距离
+        dt = ndimage.distance_transform_edt(1 - filt_edges).astype(np.float32) 
         logging.info('peaks: edt done')
 
         # Use a specifc seed for the noise so that results are reproducible
@@ -115,7 +115,7 @@ class PolicyPeaks(BaseSeedPolicy):
         np.random.seed(42)
         idxs = skimage.feature.peak_local_max(
             dt + np.random.random(dt.shape) * 1e-4,
-            indices=True, min_distance=3, threshold_abs=0, threshold_rel=0) #离边缘距离的peak
+            indices=True, min_distance=3, threshold_abs=0, threshold_rel=0) 
         np.random.set_state(state)
         
         logging.info('sorting...')
