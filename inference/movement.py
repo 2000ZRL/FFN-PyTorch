@@ -64,7 +64,7 @@ def get_scored_move_offsets(deltas, prob_map, threshold=0.9):
             relative_pos.insert(axis, axis_offset)
             ret = (score, tuple(relative_pos))
 
-            if ret not in done: #防止出现重复情形
+            if ret not in done: 
                 done.add(ret)
                 yield ret
         
@@ -133,7 +133,7 @@ class FaceMaxMovementPolicy(BaseMovementPolicy):
     """Selects candidates from maxima on prediction cuboid faces."""
 
     def __init__(self, canvas, deltas=(4, 8, 8), score_threshold=0.9):
-        self.done_rounded_coords = set()  #保存访问过的坐标，以quantize形式
+        self.done_rounded_coords = set()  #save visited coords
         self.score_threshold = score_threshold
         self._start_pos = None
         super(FaceMaxMovementPolicy, self).__init__(canvas, deque([]), deltas)
