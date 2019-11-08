@@ -1,5 +1,5 @@
 # FFN-PyTorch
-Reimplementation of Flood Filling Network based on Pytorch
+Reimplementation of Flood-Filling Network (FFN) based on Pytorch
 
 In the summer of 2019, I was conducting summer research for three months in [Prof. Shuiwang Ji](http://people.tamu.edu/~sji/)'s lab, Texas A&M University. 
 In the first month I finished reimplementing Flood-Filling Network by PyTorch. 
